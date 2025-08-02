@@ -1,18 +1,37 @@
-import React from 'react';
-import RecipeList from './components/RecipeList';
-import AddRecipeForm from './components/AddRecipeForm';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddRecipeForm from "./components/AddRecipeForm";
+import RecipeList from "./components/RecipeList";
+import RecipeDetails from "./components/RecipeDetails";
+import SearchBar from "./components/SearchBar";
+import RecommendationsList from "./components/RecommendationsList"; // 🆕 Import
+import useRecipeStore from "./components/recipeStore"; // 🆕 Access Zustand store
+import "./App.css";
 
-function App() {
+const App = () => {
+  const recommendations = useRecipeStore((state) => state.recommendations); // 🆕
+
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Recipe Sharing App</h1>
-      
-      <div className="max-w-4xl mx-auto">
+    <Router>
+      <div className="container">
+        <h1>Recipe Sharing App</h1>
         <AddRecipeForm />
-        <RecipeList />
+        <SearchBar />
+
+        {/* 🆕 Show Recommendations if any */}
+        {recommendations.length > 0 && (
+          <div style={{ marginTop: "30px" }}>
+            <h2>Recommended for You</h2>
+            <RecommendationsList />
+          </div>
+        )}
+
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/recipe/:id" element={<RecipeDetails />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;
