@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://via.placeholder.com/300x200/FFB6C1/000000?text=Spaghetti+Carbonara"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "https://via.placeholder.com/300x200/FFA07A/000000?text=Chicken+Tikka"
+  },
+  {
+    "id": 3,
+    "title": "Caesar Salad",
+    "summary": "A green salad of romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper.",
+    "image": "https://via.placeholder.com/300x200/98FB98/000000?text=Caesar+Salad"
+  },
+  {
+    "id": 4,
+    "title": "Beef Stroganoff",
+    "summary": "An originally Russian dish of sautéed pieces of beef served in a sauce with smetana (sour cream).",
+    "image": "https://via.placeholder.com/300x200/DDA0DD/000000?text=Beef+Stroganoff"
+  },
+  {
+    "id": 5,
+    "title": "Chocolate Chip Cookies",
+    "summary": "Classic homemade cookies with chocolate chips, perfect for any occasion.",
+    "image": "https://via.placeholder.com/300x200/F4A460/000000?text=Chocolate+Cookies"
+  },
+  {
+    "id": 6,
+    "title": "Fish and Chips",
+    "summary": "Traditional British dish of battered and fried fish with crispy chips.",
+    "image": "https://via.placeholder.com/300x200/87CEEB/000000?text=Fish+and+Chips"
+  },
+  {
+    "id": 7,
+    "title": "Vegetable Stir Fry",
+    "summary": "A healthy mix of fresh vegetables stir-fried with aromatic Asian sauces.",
+    "image": "https://via.placeholder.com/300x200/90EE90/000000?text=Veggie+Stir+Fry"
+  },
+  {
+    "id": 8,
+    "title": "Margherita Pizza",
+    "summary": "Classic Italian pizza topped with fresh tomatoes, mozzarella cheese, and basil.",
+    "image": "https://via.placeholder.com/300x200/FFE4B5/000000?text=Margherita+Pizza"
+  }
+]
