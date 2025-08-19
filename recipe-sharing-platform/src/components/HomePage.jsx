@@ -1,9 +1,12 @@
-import { useState, useEffect } from 'react';
-import recipeData from './src/data.json';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Clock, Users, ChefHat, Star, Heart } from 'lucide-react';
+import recipesData from './src/data.json';
+
 
 function RecipeCard({ recipe }) {
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out overflow-hidden">
+    <div className="bg-white rsounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out overflow-hidden">
       <img 
         src={recipe.image} 
         alt={recipe.title}
