@@ -1,6 +1,4 @@
 import { useState } from 'react';
-
-
 const Formik = ({ initialValues, validate, onSubmit, children }) => {
   const [values, setValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
@@ -12,6 +10,7 @@ const Formik = ({ initialValues, validate, onSubmit, children }) => {
       ...prev,
       [name]: value
     }));
+    
     
     if (errors[name]) {
       setErrors(prev => ({
@@ -50,6 +49,7 @@ const FormikForm = () => {
     email: '',
     password: ''
   };
+
   const validateForm = (formData) => {
     const newErrors = {};
     
@@ -102,18 +102,20 @@ const FormikForm = () => {
         validate={validateForm}
         onSubmit={handleSubmit}
       >
-        {({ values, errors, handleChange, handleSubmit }) => (
-          <div className="space-y-4">
-            <div>
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">
-                Username
-              </label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                value={values.username}
-                onChange={handleChange}
+        {({ values, errors, handleChange, handleSubmit }) => {
+          const { username, email, password } = values;
+          return (
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">
+                  Username
+                </label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={username}
+                  onChange={handleChange}
                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   errors.username ? 'border-red-500' : 'border-gray-300'
                 }`}
@@ -171,8 +173,9 @@ const FormikForm = () => {
             >
               Register
             </button>
-          </div>
-        )}
+                      </div>
+          );
+        }}
       </Formik>
       
       <div className="mt-4 text-center text-sm text-gray-500">
